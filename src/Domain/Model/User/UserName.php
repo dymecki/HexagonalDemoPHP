@@ -4,9 +4,9 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\ValueObjectInterface;
+use Dymecki\HexagonalDemo\Domain\ValueObject;
 
-final class UserName implements ValueObjectInterface
+final class UserName extends ValueObject
 {
     private $name;
 
@@ -18,11 +18,6 @@ final class UserName implements ValueObjectInterface
     public function name(): string
     {
         return $this->name;
-    }
-
-    public function equals(ValueObjectInterface $valueObject): bool
-    {
-        // TODO: Implement equals() method.
     }
 
     public function __toString()
