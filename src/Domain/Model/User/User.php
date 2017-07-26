@@ -46,6 +46,10 @@ final class User implements AggregateRootInterface
 
     public function __toString(): string
     {
-        return (string) $this->name() . ': <' . (string) $this->email() . '>';
+        return sprintf(
+            '%s: <%s>',
+            $this->name(),
+            $this->email()
+        );
     }
 }
