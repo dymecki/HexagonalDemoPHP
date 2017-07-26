@@ -12,11 +12,16 @@ final class User implements AggregateRootInterface
     private $name;
     private $email;
 
-    public function __construct(UserId $id, UserName $name, UserEmail $email)
+    private function __construct(UserId $id, UserName $name, UserEmail $email)
     {
         $this->id    = $id;
         $this->name  = $name;
         $this->email = $email;
+    }
+
+    public static function register(UserId $id, UserName $name, UserEmail $email): self
+    {
+        return new self($id, $name, $email);
     }
 
     public function id(): UserId
