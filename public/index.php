@@ -1,24 +1,15 @@
 <?php
 
-    echo 'HexagonalDemo 1.0';
+include_once 'InitLogger.php';
 
-    $loader = require '../vendor/autoload.php';
-    //$loader->add('/Offer', __DIR__ . '/../src');
+echo 'HexagonalDemo 1.0';
 
-    use Monolog\ErrorHandler;
-    use Monolog\Formatter\LineFormatter;
-    use Monolog\Handler\StreamHandler;
-    use Monolog\Logger;
+use Dymecki\HexagonalDemo\Domain\Model\User\User;
 
-    $logger  = new Logger('Ads');
-    $handler = new StreamHandler(__DIR__ . '/../log/php_errors.log', Logger::DEBUG);
+$user = User::register(
+    \Ramsey\Uuid\Uuid::uuid4(),
+    'Michał',
+    'michal@dymecki.com'
+);
 
-    // Register the logger to handle PHP errors and exceptions
-    ErrorHandler::register($logger);
-
-    $lineFormatter = new LineFormatter;
-    $lineFormatter->includeStacktraces();
-    $handler->setFormatter($lineFormatter);
-
-    // Add log file handler
-    $logger->pushHandler($handler);
+var_dump((string) $user);
