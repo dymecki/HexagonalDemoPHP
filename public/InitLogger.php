@@ -8,7 +8,7 @@ use Monolog\Logger;
 $loader = require '../vendor/autoload.php';
 $loader->add('/Domain/Model/User/User', __DIR__ . '/../src');
 
-$logger  = new Logger('Ads');
+$logger  = new Logger('HexagonalDemo');
 $handler = new StreamHandler(__DIR__ . '/../log/php_errors.log', Logger::DEBUG);
 
 // Register the logger to handle PHP errors and exceptions
