@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
 use Dymecki\HexagonalDemo\Domain\AggregateRootInterface;
-use Ramsey\Uuid\UuidInterface;
+use Ramsey\Uuid\Uuid;
 
 final class User implements AggregateRootInterface
 {
@@ -20,10 +20,10 @@ final class User implements AggregateRootInterface
         $this->email = $email;
     }
 
-    public static function register(UuidInterface $id, string $name, string $email): self
+    public static function register(string $name, string $email): self
     {
         return new self(
-            new UserId($id),
+            new UserId(Uuid::uuid4()),
             new UserName($name),
             new UserEmail($email)
         );
