@@ -15,7 +15,7 @@ $handler = new StreamHandler(__DIR__ . '/../log/php_errors.log', Logger::DEBUG);
 ErrorHandler::register($logger);
 
 $lineFormatter = new LineFormatter(
-    "[%datetime%] [%level_name%]\n%message%\n%context%\n%extra%\n\n",
+    "[%datetime%] [%level_name%] =================\n%message%\n\n%context%\n%extra%\n\n",
     'd.m.Y H:i:s'
 );
 $lineFormatter->includeStacktraces();
