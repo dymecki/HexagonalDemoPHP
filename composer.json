@@ -1,0 +1,28 @@
+{
+    "name": "dymecki/HexagonalDemo",
+    "description": "Sample app to demonstrate Hexagonal architecture with CQRS and DDD",
+    "license": "MIT",
+    "keywords": ["hexagonal, ddd, cqrs, ports, adapters"],
+    "authors": [
+        {
+            "name": "Michael Dymecki",
+            "email": "michal@dymecki.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.23",
+        "ramsey/uuid": "^3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*",
+        "phpmd/phpmd": "@stable",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dymecki\\HexagonalDemo\\": "src",
+            "Dymecki\\HexagonalDemo\\Tests\\": "tests"
+        }
+    }
+}
