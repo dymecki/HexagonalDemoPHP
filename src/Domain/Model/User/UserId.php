@@ -6,17 +6,18 @@ namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
 use Dymecki\HexagonalDemo\Domain\ValueObject;
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 final class UserId extends ValueObject
 {
     private $id;
 
-    public function __construct(Uuid $id)
+    public function __construct(UuidInterface $id)
     {
         $this->id = $id;
     }
 
-    public function id(): Uuid
+    public function id(): UuidInterface
     {
         return $this->id;
     }
