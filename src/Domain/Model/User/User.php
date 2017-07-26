@@ -57,7 +57,7 @@ final class User implements AggregateRootInterface
     public function __toString(): string
     {
         return sprintf(
-            '%s: <%s>',
+            '%s <%s>',
             $this->name(),
             $this->email()
         );
