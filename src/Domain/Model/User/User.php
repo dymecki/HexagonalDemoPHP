@@ -8,18 +8,20 @@ use Dymecki\HexagonalDemo\Domain\AggregateRootInterface;
 
 final class User implements AggregateRootInterface
 {
+    private $id;
     private $name;
     private $email;
 
-    public function __construct(UserName $name, UserEmail $email)
+    public function __construct(UserId $id, UserName $name, UserEmail $email)
     {
-        $this->name = $name;
+        $this->id    = $id;
+        $this->name  = $name;
         $this->email = $email;
     }
 
-    public function id()
+    public function id(): UserId
     {
-
+        return $this->id;
     }
 
     public function name(): UserName
