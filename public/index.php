@@ -5,6 +5,7 @@ include_once 'InitLogger.php';
 echo 'HexagonalDemo 1.0';
 
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
 
 $user = User::register(
     'Michał',
@@ -12,3 +13,7 @@ $user = User::register(
 );
 
 var_dump((string) $user);
+
+$userRepository = new UserInMemoryRepository;
+
+var_dump($userRepository->findById($user->id()));
