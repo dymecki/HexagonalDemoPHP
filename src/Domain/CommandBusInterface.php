@@ -6,5 +6,7 @@ namespace Dymecki\HexagonalDemo\Domain;
 
 interface CommandBusInterface
 {
-    function execute(CommandInterface $command);
+    public function execute(CommandInterface $command);
+
+    public function handler(CommandInterface $command);
 }
