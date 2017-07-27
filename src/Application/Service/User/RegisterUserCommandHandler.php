@@ -6,6 +6,7 @@ namespace Dymecki\HexagonalDemo\Application\Service\User;
 
 use Dymecki\HexagonalDemo\Domain\CommandInterface;
 use Dymecki\HexagonalDemo\Domain\CommandHandlerInterface;
+use Dymecki\HexagonalDemo\Domain\Model\User\User;
 use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
 
 final class RegisterUserCommandHandler implements CommandHandlerInterface
