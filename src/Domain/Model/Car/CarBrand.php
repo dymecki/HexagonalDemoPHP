@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-final class CarBrand
+use Dymecki\HexagonalDemo\Domain\ValueObject;
+
+final class CarBrand extends ValueObject
 {
     private $name;
 

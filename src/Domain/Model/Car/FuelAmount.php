@@ -4,7 +4,9 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-final class FuelAmount
+use Dymecki\HexagonalDemo\Domain\ValueObject;
+
+final class FuelAmount extends ValueObject
 {
     private $amount;
     private $unit;
