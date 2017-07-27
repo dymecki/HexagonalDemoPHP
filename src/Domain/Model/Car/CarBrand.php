@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-final class CarManufacturer
+final class CarBrand
 {
     private $name;
 
