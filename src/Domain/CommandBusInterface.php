@@ -8,5 +8,5 @@ interface CommandBusInterface
 {
     public function execute(CommandInterface $command);
 
-    public function handler(CommandInterface $command);
+    public function handlerObject(CommandInterface $command);
 }
