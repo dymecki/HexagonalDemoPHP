@@ -52,6 +52,11 @@ final class Car implements AggregateRootInterface
         return $this->fuelAmount;
     }
 
+    public function refuel(FuelAmount $fuelAmount)
+    {
+        $this->fuelAmount = $fuelAmount;
+    }
+
     public function record($event)
     {
         // TODO: Implement record() method.
