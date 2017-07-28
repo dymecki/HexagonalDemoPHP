@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\ValueObject;
+use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 

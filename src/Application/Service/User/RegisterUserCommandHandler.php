@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Application\Service\User;
 
-use Dymecki\HexagonalDemo\Domain\CommandInterface;
-use Dymecki\HexagonalDemo\Domain\CommandHandlerInterface;
+use Dymecki\HexagonalDemo\Domain\Common\CommandInterface;
+use Dymecki\HexagonalDemo\Domain\Common\CommandHandlerInterface;
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
 use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
 

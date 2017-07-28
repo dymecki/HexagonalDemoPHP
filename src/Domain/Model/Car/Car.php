@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\AggregateRootInterface;
+use Dymecki\HexagonalDemo\Domain\Common\AggregateRootInterface;
 use Ramsey\Uuid\Uuid;
 
 final class Car implements AggregateRootInterface

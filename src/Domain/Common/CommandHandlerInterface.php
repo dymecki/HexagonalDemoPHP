@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain;
+namespace Dymecki\HexagonalDemo\Domain\Common;
 
 interface CommandHandlerInterface
 {
