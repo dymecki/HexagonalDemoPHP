@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
 use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
+use Dymecki\HexagonalDemo\Domain\Model\User\Exception\EmailNotValidException;
 
 final class UserEmail extends ValueObject
 {
@@ -13,7 +14,7 @@ final class UserEmail extends ValueObject
     public function __construct(string $email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            throw new \Exception('Email address is not valid: ' . $email);
+            throw new EmailNotValidException($email);
         }
 
         $this->email = $email;
