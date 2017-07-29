@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application;
+namespace Dymecki\HexagonalDemo\Application\Command;
 
-use Dymecki\HexagonalDemo\Application\Command\CommandInterface;
+use Dymecki\HexagonalDemo\Application\Command;
 
 interface CommandBusInterface
 {

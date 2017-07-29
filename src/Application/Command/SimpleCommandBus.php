@@ -2,9 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application;
-
-use Dymecki\HexagonalDemo\Application\Command\CommandInterface;
+namespace Dymecki\HexagonalDemo\Application\Command;
 
 final class SimpleCommandBus implements CommandBusInterface
 {
