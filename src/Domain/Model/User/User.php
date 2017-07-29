@@ -13,7 +13,7 @@ final class User implements AggregateRootInterface
     private $name;
     private $email;
 
-    private function __construct(UserId $id, UserName $name, UserEmail $email)
+    private function __construct(UserId $id, UserName $name, Email $email)
     {
         $this->id    = $id;
         $this->name  = $name;
@@ -25,7 +25,7 @@ final class User implements AggregateRootInterface
         return new self(
             new UserId(Uuid::uuid4()),
             new UserName($name),
-            new UserEmail($email)
+            new Email($email)
         );
     }
 
@@ -39,7 +39,7 @@ final class User implements AggregateRootInterface
         return $this->name;
     }
 
-    public function email(): UserEmail
+    public function email(): Email
     {
         return $this->email;
     }
