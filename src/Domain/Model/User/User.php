@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\AggregateRootInterface;
+use Dymecki\HexagonalDemo\Domain\Common\AggregateRootInterface;
 use Ramsey\Uuid\Uuid;
 
 final class User implements AggregateRootInterface

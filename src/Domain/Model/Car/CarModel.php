@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\ValueObject;
+use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
 
 final class CarModel extends ValueObject
 {
