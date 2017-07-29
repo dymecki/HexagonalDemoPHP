@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Application\Adapter\Console;
 
+use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -23,13 +25,13 @@ class UserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $name  = $input->getArgument('Name');
-        $email = $input->getArgument('E-mail');
+        $user = User::register(
+            $input->getArgument('Name'),
+            $input->getArgument('E-mail')
+        );
 
-        $output->writeln(sprintf(
-            'New name and e-mail: %s, %s',
-            $name,
-            $email
-        ));
+        (new UserInMemoryRepository)->save($user);
+
+        $output->writeln(sprintf('%s', $user));
     }
 }
