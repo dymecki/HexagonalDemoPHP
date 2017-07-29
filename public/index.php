@@ -3,7 +3,7 @@
 include_once 'InitLogger.php';
 
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
 use Dymecki\HexagonalDemo\Application\SimpleCommandBus;
 use Dymecki\HexagonalDemo\Application\Command\User\RegisterUserCommand;
 

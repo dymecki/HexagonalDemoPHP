@@ -7,7 +7,7 @@ namespace Dymecki\HexagonalDemo\Application\Command\User;
 use Dymecki\HexagonalDemo\Application\Command\CommandInterface;
 use Dymecki\HexagonalDemo\Application\Command\CommandHandlerInterface;
 use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\CarInMemoryRepository;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\CarInMemoryRepository;
 
 final class RegisterCarCommandHandler implements CommandHandlerInterface
 {

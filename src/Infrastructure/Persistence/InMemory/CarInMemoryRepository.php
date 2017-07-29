@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory;
+namespace Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory;
 
 use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
 use Dymecki\HexagonalDemo\Domain\Model\Car\CarId;
