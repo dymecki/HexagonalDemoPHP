@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application\Service\User;
+namespace Dymecki\HexagonalDemo\Application\Command\User;
 
-use Dymecki\HexagonalDemo\Domain\CommandInterface;
+use Dymecki\HexagonalDemo\Domain\Common\CommandInterface;
 
 final class RegisterCarCommand implements CommandInterface
 {

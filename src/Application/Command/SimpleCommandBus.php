@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application\Service;
+namespace Dymecki\HexagonalDemo\Application\Command;
 
 use Dymecki\HexagonalDemo\Domain\Common\CommandBusInterface;
 use Dymecki\HexagonalDemo\Domain\Common\CommandInterface;
