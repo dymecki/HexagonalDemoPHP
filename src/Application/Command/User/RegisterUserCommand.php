@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Application\Command\User;
 
-use Dymecki\HexagonalDemo\Domain\Common\CommandInterface;
+use Dymecki\HexagonalDemo\Application\Command\CommandInterface;
 
 final class RegisterUserCommand implements CommandInterface
 {
