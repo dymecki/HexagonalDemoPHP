@@ -8,5 +8,8 @@ use Dymecki\HexagonalDemo\Domain\Common\EventInterface;
 
 final class UserRegisteredEvent implements EventInterface
 {
-
+    public function name()
+    {
+        // TODO: Implement name() method.
+    }
 }
