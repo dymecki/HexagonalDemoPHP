@@ -1,24 +1,25 @@
 <?php
 
-    echo 'HexagonalDemo 1.0';
+include_once 'InitLogger.php';
 
-    $loader = require '../vendor/autoload.php';
-    //$loader->add('/Offer', __DIR__ . '/../src');
+use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
+use Dymecki\HexagonalDemo\Application\Command\SimpleCommandBus;
+use Dymecki\HexagonalDemo\Application\Command\User\RegisterUserCommand;
 
-    use Monolog\ErrorHandler;
-    use Monolog\Formatter\LineFormatter;
-    use Monolog\Handler\StreamHandler;
-    use Monolog\Logger;
+$user = User::register(
+    'Michał',
+    'michal@dymecki.com'
+);
 
-    $logger  = new Logger('Ads');
-    $handler = new StreamHandler(__DIR__ . '/../log/php_errors.log', Logger::DEBUG);
+//var_dump((string) $user);
 
-    // Register the logger to handle PHP errors and exceptions
-    ErrorHandler::register($logger);
+$userRepository = new UserInMemoryRepository;
+//var_dump($userRepository->findById($user->id()));
 
-    $lineFormatter = new LineFormatter;
-    $lineFormatter->includeStacktraces();
-    $handler->setFormatter($lineFormatter);
+$registerUserCommand = new RegisterUserCommand('Jack', 'jack@alibaba.com');
 
-    // Add log file handler
-    $logger->pushHandler($handler);
+$commandBus = new SimpleCommandBus;
+var_dump(
+    $commandBus->execute($registerUserCommand)
+);
