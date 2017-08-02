@@ -11,6 +11,10 @@
 |
 */
 
+use Illuminate\Http\Request;
+use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,3 +23,27 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return 'Home';
 });
+
+Route::get('/user', function (Request $request) {
+    echo 'User';
+
+    $user = User::register(
+        $request->get('Name'),
+        $request->get('E-mail')
+    );
+
+    var_dump($user);
+});
+
+Route::post('/user', function (Request $request) {
+    $user = User::register(
+        $request->get('Name'),
+        $request->get('E-mail')
+    );
+
+    (new UserInMemoryRepository)->save($user);
+
+    return sprintf('%s', $user);
+});
+
+
