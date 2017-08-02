@@ -1,3 +1,3 @@
 # HexagonalDemoPHP
 
-Sample application to show DDD, CQRS, Hexagonal architecture (Ports and Adapters), Events and Event Sourcing.
+Sample application to show DDD, CQRS, Hexagonal architecture (Ports and Adapters), Domain Events and Event Sourcing.
