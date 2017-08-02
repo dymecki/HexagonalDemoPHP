@@ -7,7 +7,7 @@ namespace Dymecki\HexagonalDemo\Domain\Model\User;
 use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
 use Dymecki\HexagonalDemo\Domain\Model\User\Exception\EmailNotValidException;
 
-final class UserEmail extends ValueObject
+final class Email extends ValueObject
 {
     private $email;
 
