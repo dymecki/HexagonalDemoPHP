@@ -5,7 +5,7 @@ use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
-$loader = require '../vendor/autoload.php';
+$loader = require '../../../../vendor/autoload.php';
 $loader->add('/Domain/Model/User/User', __DIR__ . '/../src');
 
 $logger  = new Logger('HexagonalDemo');
