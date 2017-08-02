@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application\Adapter\Console;
+namespace Dymecki\HexagonalDemo\Adapter\Console;
 
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
 use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
