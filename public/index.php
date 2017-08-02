@@ -8,18 +8,14 @@ use Dymecki\HexagonalDemo\Application\Command\SimpleCommandBus;
 use Dymecki\HexagonalDemo\Application\Command\User\RegisterUserCommand;
 
 $user = User::register(
-    'Michał',
-    'michal@dymecki.com'
+    'John',
+    'john@foo.com'
 );
 
-//var_dump((string) $user);
+$userRepository      = new UserInMemoryRepository;
+$registerUserCommand = new RegisterUserCommand('Adam', 'adam@smith.com');
+$commandBus          = new SimpleCommandBus;
 
-$userRepository = new UserInMemoryRepository;
-//var_dump($userRepository->findById($user->id()));
-
-$registerUserCommand = new RegisterUserCommand('Jack', 'jack@alibaba.com');
-
-$commandBus = new SimpleCommandBus;
 var_dump(
     $commandBus->execute($registerUserCommand)
 );

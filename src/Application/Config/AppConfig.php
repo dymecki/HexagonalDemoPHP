@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dymecki\HexagonalDemo\Infrastructure\Config;
+namespace Dymecki\HexagonalDemo\Application\Config;
 
 return [
     /**
