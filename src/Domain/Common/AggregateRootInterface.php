@@ -6,7 +6,7 @@ namespace Dymecki\HexagonalDemo\Domain\Common;
 
 interface AggregateRootInterface extends EntityInterface
 {
-    public function record($event);
+    public function record(EventInterface $event);
 
     public function release();
 }
