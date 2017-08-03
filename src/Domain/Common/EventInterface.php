@@ -6,5 +6,5 @@ namespace Dymecki\HexagonalDemo\Domain\Common;
 
 interface EventInterface
 {
-    public function name();
+    public function name(): string;
 }
