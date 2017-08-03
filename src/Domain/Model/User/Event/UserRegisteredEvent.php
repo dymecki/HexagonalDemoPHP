@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\User\Event;
 
-use Dymecki\HexagonalDemo\Domain\Common\EventInterface;
+use Dymecki\HexagonalDemo\Domain\Common\Event;
 
-final class UserRegisteredEvent implements EventInterface
+final class UserRegisteredEvent extends Event
 {
-    public function name()
-    {
-        // TODO: Implement name() method.
-    }
 }
