@@ -6,7 +6,7 @@ namespace Dymecki\HexagonalDemo\Domain\Common;
 
 abstract class AggregateRoot implements AggregateRootInterface
 {
-    private $id;
+    protected $id;
 
     public function id()
     {
