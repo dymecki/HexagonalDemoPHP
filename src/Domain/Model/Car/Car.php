@@ -46,7 +46,7 @@ final class Car extends AggregateRoot
         return $this->fuelAmount;
     }
 
-    public function refuel(FuelAmount $fuelAmount)
+    public function refuel(FuelAmount $fuelAmount): void
     {
         $this->fuelAmount = $fuelAmount;
     }
