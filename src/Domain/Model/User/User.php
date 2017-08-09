@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
 use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
+use Dymecki\HexagonalDemo\Domain\Common\EventInterface;
 use Ramsey\Uuid\Uuid;
 
 final class User extends AggregateRoot
@@ -43,7 +44,7 @@ final class User extends AggregateRoot
         // TODO: Implement release() method.
     }
 
-    public function record($event)
+    public function record(EventInterface $event)
     {
         // TODO: Implement record() method.
     }
