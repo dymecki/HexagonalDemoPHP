@@ -4,12 +4,11 @@ declare(strict_types = 1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\Common\AggregateRootInterface;
+use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
 use Ramsey\Uuid\Uuid;
 
-final class User implements AggregateRootInterface
+final class User extends AggregateRoot
 {
-    private $id;
     private $name;
     private $email;
 
@@ -27,11 +26,6 @@ final class User implements AggregateRootInterface
             new UserName($name),
             new Email($email)
         );
-    }
-
-    public function id(): UserId
-    {
-        return $this->id;
     }
 
     public function name(): UserName
