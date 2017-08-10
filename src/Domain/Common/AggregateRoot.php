@@ -21,6 +21,11 @@ abstract class AggregateRoot implements AggregateRootInterface
 
     public function releaseEvents()
     {
-        // TODO: Implement release() method.
+        return $this->events;
+    }
+
+    public function clearEvents()
+    {
+        $this->events = [];
     }
 }
