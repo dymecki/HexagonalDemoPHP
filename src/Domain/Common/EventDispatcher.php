@@ -8,7 +8,7 @@ final class EventDispatcher
 {
     private $listeners = [];
 
-    public function bind(string $eventName, ListenerInterface $listener): void
+    public function bind(string $eventName, EventListenerInterface $listener): void
     {
         $this->listeners[$eventName][] = $listener;
     }
