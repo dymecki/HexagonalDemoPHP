@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\Common\AggregateRootInterface;
+use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
 use Ramsey\Uuid\Uuid;
 
-final class Car implements AggregateRootInterface
+final class Car extends AggregateRoot
 {
-    private $id;
     private $brand;
     private $model;
     private $fuelAmount;
@@ -22,19 +21,14 @@ final class Car implements AggregateRootInterface
         $this->fuelAmount = $fuelAmount;
     }
 
-    public static function register(string $carBrand, string $carModel, float $fuelAmount, string $fuelUnit): self
+    public static function register(string $carBrand, string $carModel): self
     {
         return new self(
             new CarId(Uuid::uuid4()),
             new CarBrand($carBrand),
             new CarModel($carModel),
-            new FuelAmount($fuelAmount, $fuelUnit)
+            new FuelAmount(0, 'liter')
         );
-    }
-
-    public function id(): CarId
-    {
-        return $this->id();
     }
 
     public function brand(): CarBrand
@@ -52,19 +46,9 @@ final class Car implements AggregateRootInterface
         return $this->fuelAmount;
     }
 
-    public function refuel(FuelAmount $fuelAmount)
+    public function refuel(FuelAmount $fuelAmount): void
     {
         $this->fuelAmount = $fuelAmount;
-    }
-
-    public function record($event)
-    {
-        // TODO: Implement record() method.
-    }
-
-    public function release()
-    {
-        // TODO: Implement release() method.
     }
 
     public function __toString(): string

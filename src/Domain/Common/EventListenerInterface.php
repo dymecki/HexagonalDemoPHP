@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dymecki\HexagonalDemo\Domain\Common;
 
-interface EventInterface
+interface EventListenerInterface
 {
-    public function name(): string;
+    public function handle(EventInterface $event);
 }

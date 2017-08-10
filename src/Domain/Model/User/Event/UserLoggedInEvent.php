@@ -6,6 +6,6 @@ namespace Dymecki\HexagonalDemo\Domain\Model\User\Event;
 
 use Dymecki\HexagonalDemo\Domain\Common\Event;
 
-final class UserRegisteredEvent extends Event
+final class UserLoggedInEvent extends Event
 {
 }
