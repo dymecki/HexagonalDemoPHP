@@ -21,13 +21,13 @@ final class Car extends AggregateRoot
         $this->fuelAmount = $fuelAmount;
     }
 
-    public static function register(string $carBrand, string $carModel, float $fuelAmount, string $fuelUnit): self
+    public static function register(string $carBrand, string $carModel): self
     {
         return new self(
             new CarId(Uuid::uuid4()),
             new CarBrand($carBrand),
             new CarModel($carModel),
-            new FuelAmount($fuelAmount, $fuelUnit)
+            new FuelAmount(0, 'liter')
         );
     }
 
