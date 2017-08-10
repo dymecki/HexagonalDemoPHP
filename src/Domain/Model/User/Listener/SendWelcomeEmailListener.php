@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Dymecki\HexagonalDemo\Domain\Model\User\Listener;
 
 use Dymecki\HexagonalDemo\Domain\Common\EventInterface;
-use Dymecki\HexagonalDemo\Domain\Common\ListenerInterface;
+use Dymecki\HexagonalDemo\Domain\Common\EventListenerInterface;
 
-final class SendWelcomeEmailListener implements ListenerInterface
+final class SendWelcomeEmailListener implements EventListenerInterface
 {
     public function handle(EventInterface $event)
     {
