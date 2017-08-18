@@ -1,0 +1,11 @@
+User:
+  type: entity
+  table: Users
+  id:
+    userId:
+      type: guid
+      generator:
+        strategy: UUID
+  fields:
+    name:
+      type: string
