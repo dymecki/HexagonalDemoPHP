@@ -20,7 +20,8 @@
         "phpunit/phpunit": "*",
         "phpmd/phpmd": "@stable",
         "phpdocumentor/phpdocumentor": "2.*",
-        "mockery/mockery": "dev-master"
+        "mockery/mockery": "dev-master",
+        "behat/behat": "^3.3"
     },
     "autoload": {
         "psr-4": {
