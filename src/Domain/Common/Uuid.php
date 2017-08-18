@@ -2,9 +2,8 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User;
+namespace Dymecki\HexagonalDemo\Domain\Common;
 
-use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use Ramsey\Uuid\UuidInterface;
 
