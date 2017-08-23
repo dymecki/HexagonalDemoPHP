@@ -6,10 +6,11 @@ namespace Domain\Model\Service;
 
 use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use Money\Money;
 
 final class CarSellingService implements ServiceInterface
 {
-    public function sell(User $seller, User $buyer, Car $car, $amount): bool
+    public function sell(User $seller, User $buyer, Car $car, Money $money): bool
     {
         if ($seller->id() == $buyer->id()) {
             throw new \Exception('Seller and buyer cannot be the same person.');
