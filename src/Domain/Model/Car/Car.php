@@ -15,7 +15,6 @@ final class Car extends AggregateRoot
 
     private function __construct(CarId $id, CarBrand $brand, CarModel $model, FuelAmount $fuelAmount)
     {
-        $this->id         = $id;
         $this->brand      = $brand;
         $this->model      = $model;
         $this->fuelAmount = $fuelAmount;
