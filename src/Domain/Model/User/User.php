@@ -12,7 +12,7 @@ final class User extends AggregateRoot
     private $name;
     private $email;
 
-    private function __construct(UserId $id, UserName $name, Email $email)
+    private function __construct($id, UserName $name, Email $email)
     {
         $this->id    = $id;
         $this->name  = $name;
@@ -22,7 +22,7 @@ final class User extends AggregateRoot
     public static function register(string $name, string $email): self
     {
         return new self(
-            new UserId(Uuid::uuid4()),
+            Uuid::uuid4()->toString(),
             new UserName($name),
             new Email($email)
         );
