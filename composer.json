@@ -14,7 +14,8 @@
         "ramsey/uuid": "^3.6",
         "doctrine/orm": "*",
         "robmorgan/phinx": "^0.8.1",
-        "php-amqplib/php-amqplib": "^2.6"
+        "php-amqplib/php-amqplib": "^2.6",
+        "moneyphp/money": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
