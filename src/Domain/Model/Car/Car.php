@@ -13,8 +13,9 @@ final class Car extends AggregateRoot
     private $model;
     private $fuelAmount;
 
-    private function __construct(CarId $id, CarBrand $brand, CarModel $model, FuelAmount $fuelAmount)
+    private function __construct(string $id, CarBrand $brand, CarModel $model, FuelAmount $fuelAmount)
     {
+        $this->id         = $id;
         $this->brand      = $brand;
         $this->model      = $model;
         $this->fuelAmount = $fuelAmount;
@@ -23,7 +24,7 @@ final class Car extends AggregateRoot
     public static function register(string $carBrand, string $carModel): self
     {
         return new self(
-            new CarId(Uuid::uuid4()),
+            Uuid::uuid4()->toString(),
             new CarBrand($carBrand),
             new CarModel($carModel),
             new FuelAmount(0, 'liter')
