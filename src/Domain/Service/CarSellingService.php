@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Domain\Model\Service;
+namespace Domain\Service;
 
 use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
 use Dymecki\HexagonalDemo\Domain\Model\User\User;
