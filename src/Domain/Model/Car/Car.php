@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dymecki\HexagonalDemo\Domain\Model\Car;
 
 use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
-use Ramsey\Uuid\Uuid;
+use Dymecki\HexagonalDemo\Domain\Common\Uuid;
 
 final class Car extends AggregateRoot
 {
@@ -24,7 +24,7 @@ final class Car extends AggregateRoot
     public static function register(string $carBrand, string $carModel): self
     {
         return new self(
-            Uuid::uuid4()->toString(),
+            Uuid::generate(),
             new CarBrand($carBrand),
             new CarModel($carModel),
             new FuelAmount(0, 'liter')
