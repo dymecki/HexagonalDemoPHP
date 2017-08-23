@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Dymecki\HexagonalDemo\Domain\Model\User;
 
 use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
-use Ramsey\Uuid\Uuid;
+use Dymecki\HexagonalDemo\Domain\Common\Uuid;
 
 final class User extends AggregateRoot
 {
@@ -22,7 +22,7 @@ final class User extends AggregateRoot
     public static function register(string $name, string $email): self
     {
         return new self(
-            Uuid::uuid4()->toString(),
+            Uuid::generate(),
             new UserName($name),
             new Email($email)
         );
