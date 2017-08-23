@@ -21,6 +21,11 @@ final class Uuid extends ValueObject
         return $this->id;
     }
 
+    public static function generate(): string
+    {
+        return RamseyUuid::uuid4()->toString();
+    }
+
     public static function fromString(string $userId): self
     {
         return new self(RamseyUuid::fromString($userId));
