@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application\Command;
+namespace App\Application\Command;
 
 interface CommandInterface
 {

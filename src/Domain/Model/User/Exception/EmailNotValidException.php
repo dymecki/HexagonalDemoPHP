@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User\Exception;
+namespace App\Domain\Model\User\Exception;
 
 final class EmailNotValidException extends \Exception
 {

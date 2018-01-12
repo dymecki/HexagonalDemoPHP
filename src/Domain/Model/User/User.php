@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User;
+namespace App\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
-use Dymecki\HexagonalDemo\Domain\Common\Uuid;
+use App\Domain\Common\AggregateRoot;
+use App\Domain\Common\Uuid;
 
 final class User extends AggregateRoot
 {

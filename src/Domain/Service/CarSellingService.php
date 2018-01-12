@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace Domain\Service;
 
-use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
-use Dymecki\HexagonalDemo\Domain\Model\User\User;
+use App\Domain\Model\Car\Car;
+use App\Domain\Model\User\User;
 use Money\Money;
 
 final class CarSellingService implements ServiceInterface

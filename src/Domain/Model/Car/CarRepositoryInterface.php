@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\Car;
+namespace App\Domain\Model\Car;
 
 interface CarRepositoryInterface
 {

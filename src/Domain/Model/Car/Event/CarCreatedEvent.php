@@ -1,10 +1,10 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\Car\Event;
+namespace App\Domain\Model\Car\Event;
 
-use Dymecki\HexagonalDemo\Domain\Common\Event;
+use App\Domain\Common\Event;
 
 final class CarCreatedEvent extends Event
 {

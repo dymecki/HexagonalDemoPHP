@@ -1,10 +1,10 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Infrastructure\Persistence;
+namespace App\Infrastructure\Persistence;
 
-use Dymecki\HexagonalDemo\Infrastructure\Config;
+use App\Infrastructure\Config;
 
 final class RepositoryFactory
 {

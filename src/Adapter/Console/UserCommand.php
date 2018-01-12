@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Adapter\Console;
+namespace App\Adapter\Console;
 
-use Dymecki\HexagonalDemo\Domain\Model\User\User;
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
+use App\Domain\Model\User\User;
+use App\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

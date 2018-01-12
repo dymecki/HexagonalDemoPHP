@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace Dymecki\HexagonalDemo\Adapter\Console;
+namespace App\Adapter\Console;
 
 require __DIR__.'/../../../vendor/autoload.php';
 

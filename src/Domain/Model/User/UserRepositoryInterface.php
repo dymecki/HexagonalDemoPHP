@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User;
+namespace App\Domain\Model\User;
 
 interface UserRepositoryInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-//namespace Dymecki\HexagonalDemo\Infrastructure\Persistence\Doctrine\ORM;
+//namespace App\Infrastructure\Persistence\Doctrine\ORM;
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;

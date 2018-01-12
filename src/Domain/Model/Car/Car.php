@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\Car;
+namespace App\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\Common\AggregateRoot;
-use Dymecki\HexagonalDemo\Domain\Common\Uuid;
+use App\Domain\Common\AggregateRoot;
+use App\Domain\Common\Uuid;
 
 final class Car extends AggregateRoot
 {

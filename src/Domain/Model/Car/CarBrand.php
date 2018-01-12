@@ -1,10 +1,10 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\Car;
+namespace App\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
+use App\Domain\Common\ValueObject;
 
 final class CarBrand extends ValueObject
 {

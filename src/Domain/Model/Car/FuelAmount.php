@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\Car;
+namespace App\Domain\Model\Car;
 
-use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
+use App\Domain\Common\ValueObject;
 
 final class FuelAmount extends ValueObject
 {

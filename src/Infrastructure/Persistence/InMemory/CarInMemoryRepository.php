@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory;
+namespace App\Infrastructure\Persistence\InMemory;
 
-use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
-use Dymecki\HexagonalDemo\Domain\Model\Car\CarId;
-use Dymecki\HexagonalDemo\Domain\Model\Car\CarRepositoryInterface;
+use App\Domain\Model\Car\Car;
+use App\Domain\Model\Car\CarId;
+use App\Domain\Model\Car\CarRepositoryInterface;
 
 final class CarInMemoryRepository implements CarRepositoryInterface
 {

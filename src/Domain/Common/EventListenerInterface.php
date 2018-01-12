@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Common;
+namespace App\Domain\Common;
 
 interface EventListenerInterface
 {

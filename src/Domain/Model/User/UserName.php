@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User;
+namespace App\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
+use App\Domain\Common\ValueObject;
 
 final class UserName extends ValueObject
 {

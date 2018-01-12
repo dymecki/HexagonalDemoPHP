@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User;
+namespace App\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\Common\ValueObject;
-use Dymecki\HexagonalDemo\Domain\Model\User\Exception\EmailNotValidException;
+use App\Domain\Common\ValueObject;
+use App\Domain\Model\User\Exception\EmailNotValidException;
 
 final class Email extends ValueObject
 {

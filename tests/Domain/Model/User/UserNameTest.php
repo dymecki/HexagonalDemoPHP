@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dymecki\HexagonalDemo\Tests\Domain\Model\User;
+namespace App\Tests\Domain\Model\User;
 
-use Dymecki\HexagonalDemo\Domain\Model\User\UserName;
+use App\Domain\Model\User\UserName;
 use PHPUnit\Framework\TestCase;
 
 class UserNameTest extends TestCase

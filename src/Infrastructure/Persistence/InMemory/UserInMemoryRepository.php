@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory;
+namespace App\Infrastructure\Persistence\InMemory;
 
-use Dymecki\HexagonalDemo\Domain\Model\User\User;
-use Dymecki\HexagonalDemo\Domain\Model\User\UserId;
-use Dymecki\HexagonalDemo\Domain\Model\User\UserRepositoryInterface;
+use App\Domain\Model\User\User;
+use App\Domain\Model\User\UserId;
+use App\Domain\Model\User\UserRepositoryInterface;
 
 final class UserInMemoryRepository implements UserRepositoryInterface
 {

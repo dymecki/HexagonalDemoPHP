@@ -26,8 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Dymecki\\HexagonalDemo\\": "src",
-            "Dymecki\\HexagonalDemo\\Tests\\": "tests"
+            "App\\": "src",
+            "Apo\\Tests\\": "tests"
         }
     }
 }

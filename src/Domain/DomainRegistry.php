@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain;
+namespace App\Domain;
 
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
+use App\Infrastructure\Persistence\Repository\InMemory\UserInMemoryRepository;
 
 final class DomainRegistry
 {

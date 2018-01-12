@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Domain\Model\User\Listener;
+namespace App\Domain\Model\User\Listener;
 
-use Dymecki\HexagonalDemo\Domain\Common\EventInterface;
-use Dymecki\HexagonalDemo\Domain\Common\EventListenerInterface;
+use App\Domain\Common\EventInterface;
+use App\Domain\Common\EventListenerInterface;
 
 final class SendWelcomeEmailListener implements EventListenerInterface
 {

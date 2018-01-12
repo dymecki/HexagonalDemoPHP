@@ -2,12 +2,12 @@
 
 declare(strict_types = 1);
 
-namespace Dymecki\HexagonalDemo\Application\Command\User;
+namespace App\Application\Command\User;
 
-use Dymecki\HexagonalDemo\Application\Command\CommandInterface;
-use Dymecki\HexagonalDemo\Application\Command\CommandHandlerInterface;
-use Dymecki\HexagonalDemo\Domain\Model\Car\Car;
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\CarInMemoryRepository;
+use App\Application\Command\CommandInterface;
+use App\Application\Command\CommandHandlerInterface;
+use App\Domain\Model\Car\Car;
+use App\Infrastructure\Persistence\InMemory\CarInMemoryRepository;
 
 final class RegisterCarCommandHandler implements CommandHandlerInterface
 {

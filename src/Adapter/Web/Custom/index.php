@@ -2,10 +2,10 @@
 
 include_once 'InitLogger.php';
 
-use Dymecki\HexagonalDemo\Domain\Model\User\User;
-use Dymecki\HexagonalDemo\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
-use Dymecki\HexagonalDemo\Application\Command\SimpleCommandBus;
-use Dymecki\HexagonalDemo\Application\Command\User\RegisterUserCommand;
+use App\Domain\Model\User\User;
+use App\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
+use App\Application\Command\SimpleCommandBus;
+use App\Application\Command\User\RegisterUserCommand;
 
 $user = User::register(
     'John',
