@@ -10,22 +10,19 @@ use App\Domain\Common\Uuid;
 final class Library extends AggregateRoot
 {
     private $id;
-    private $title;
-    private $isbn;
+    private $name;
 
-    private function __construct(string $id, LibraryName $title, LibraryIsbn $isbn)
+    private function __construct(string $id, LibraryName $name)
     {
-        $this->id    = $id;
-        $this->title = $title;
-        $this->isbn  = $isbn;
+        $this->id   = $id;
+        $this->name = $name;
     }
 
-    public static function register(string $bookTitle, string $bookIsbn): self
+    public static function register(string $name): self
     {
         return new self(
             Uuid::generate(),
-            new LibraryName($bookTitle),
-            new LibraryIsbn($bookIsbn)
+            new LibraryName($name)
         );
     }
 
@@ -34,22 +31,16 @@ final class Library extends AggregateRoot
         return $this->id;
     }
 
-    public function title(): LibraryName
+    public function name(): LibraryName
     {
-        return $this->title;
-    }
-
-    public function isbn(): LibraryIsbn
-    {
-        return $this->isbn;
+        return $this->name;
     }
 
     public function __toString(): string
     {
         return sprintf(
             '%s %s',
-            $this->title(),
-            $this->isbn()
+            $this->name()
         );
     }
 }
