@@ -2,61 +2,54 @@
 
 declare(strict_types = 1);
 
-namespace App\Domain\Model\Car;
+namespace App\Domain\Model\Book;
 
 use App\Domain\Common\AggregateRoot;
 use App\Domain\Common\Uuid;
 
 final class Book extends AggregateRoot
 {
-    private $brand;
-    private $model;
-    private $fuelAmount;
+    private $id;
+    private $title;
+    private $isbn;
 
-    private function __construct(string $id, BookIsbn $brand, BookTitle $model, FuelAmount $fuelAmount)
+    private function __construct(string $id, BookTitle $title, BookIsbn $isbn)
     {
-        $this->id         = $id;
-        $this->brand      = $brand;
-        $this->model      = $model;
-        $this->fuelAmount = $fuelAmount;
+        $this->id    = $id;
+        $this->title = $title;
+        $this->isbn  = $isbn;
     }
 
-    public static function register(string $carBrand, string $carModel): self
+    public static function register(string $bookTitle, string $bookIsbn): self
     {
         return new self(
             Uuid::generate(),
-            new BookIsbn($carBrand),
-            new BookTitle($carModel),
-            new FuelAmount(0, 'liter')
+            new BookTitle($bookTitle),
+            new BookIsbn($bookIsbn)
         );
     }
 
-    public function brand(): BookIsbn
+    public function id(): string
     {
-        return $this->brand;
+        return $this->id;
     }
 
-    public function model(): BookTitle
+    public function title(): BookTitle
     {
-        return $this->model;
+        return $this->title;
     }
 
-    public function fuelAmount(): FuelAmount
+    public function isbn(): BookIsbn
     {
-        return $this->fuelAmount;
-    }
-
-    public function refuel(FuelAmount $fuelAmount): void
-    {
-        $this->fuelAmount = $fuelAmount;
+        return $this->isbn;
     }
 
     public function __toString(): string
     {
         return sprintf(
             '%s %s',
-            $this->brand(),
-            $this->model()
+            $this->title(),
+            $this->isbn()
         );
     }
 }
