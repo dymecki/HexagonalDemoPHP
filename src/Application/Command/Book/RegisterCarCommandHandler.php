@@ -6,22 +6,20 @@ namespace App\Application\Command\User;
 
 use App\Application\Command\CommandInterface;
 use App\Application\Command\CommandHandlerInterface;
-use App\Domain\Model\Car\Car;
-use App\Infrastructure\Persistence\InMemory\CarInMemoryRepository;
+use App\Domain\Model\Book\Book;
+use App\Infrastructure\Persistence\InMemory\BookInMemoryRepository;
 
 final class RegisterCarCommandHandler implements CommandHandlerInterface
 {
     public function handle(CommandInterface $command)
     {
-        $user = Car::register(
-            $command->brand(),
-            $command->model(),
-            $command->fuelAmount(),
-            $command->fuelUnit()
+        $book = Book::register(
+            $command->title(),
+            $command->isbn()
         );
 
-        (new CarInMemoryRepository)->add($user);
+        (new BookInMemoryRepository)->add($book);
 
-        return $user;
+        return $book;
     }
 }
