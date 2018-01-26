@@ -6,9 +6,9 @@ namespace App\Domain\Model\Car;
 
 interface CarRepositoryInterface
 {
-    public function add(Car $car);
+    public function add(Book $car);
 
-    public function findById(CarId $carId): Car;
+    public function findById(CarId $carId): Book;
 
-    public function remove(Car $car);
+    public function remove(Book $car);
 }

@@ -7,7 +7,7 @@ namespace App\Domain\Model\Car;
 use App\Domain\Common\AggregateRoot;
 use App\Domain\Common\Uuid;
 
-final class Car extends AggregateRoot
+final class Book extends AggregateRoot
 {
     private $brand;
     private $model;

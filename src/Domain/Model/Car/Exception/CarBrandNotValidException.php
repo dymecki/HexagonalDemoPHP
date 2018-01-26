@@ -6,8 +6,8 @@ namespace App\Domain\Model\User\Exception;
 
 final class CarBrandNotValidException extends \Exception
 {
-    public function __construct($brand)
+    public function __construct($title)
     {
-        parent::__construct('Car brand is not valid: ' . $brand);
+        parent::__construct('Car brand is not valid: ' . $title);
     }
 }
