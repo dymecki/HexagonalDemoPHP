@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Domain\Model\User;
+namespace App\Domain\Model\Book;
 
 use App\Domain\Common\ValueObject;
 
-final class UserName extends ValueObject
+final class BookTitle extends ValueObject
 {
     private $value;
 
@@ -20,7 +20,7 @@ final class UserName extends ValueObject
         return $this->value;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->value();
     }
