@@ -6,7 +6,7 @@ namespace App\Domain\Model\Car;
 
 interface CarRepositoryInterface
 {
-    public function save(Car $car);
+    public function add(Car $car);
 
     public function findById(CarId $carId): Car;
 

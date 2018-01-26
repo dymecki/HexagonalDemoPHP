@@ -6,7 +6,7 @@ namespace App\Domain\Model\User;
 
 interface UserRepositoryInterface
 {
-    public function save(User $user);
+    public function add(User $user);
 
     public function findById(UserId $userId): User;
 

@@ -20,7 +20,7 @@ final class RegisterCarCommandHandler implements CommandHandlerInterface
             $command->fuelUnit()
         );
 
-        (new CarInMemoryRepository)->save($user);
+        (new CarInMemoryRepository)->add($user);
 
         return $user;
     }

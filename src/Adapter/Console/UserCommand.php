@@ -30,7 +30,7 @@ class UserCommand extends Command
             $input->getArgument('E-mail')
         );
 
-        (new UserInMemoryRepository)->save($user);
+        (new UserInMemoryRepository)->add($user);
 
         $output->writeln(sprintf('%s', $user));
     }

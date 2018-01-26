@@ -18,7 +18,7 @@ final class RegisterUserCommandHandler implements CommandHandlerInterface
             $command->email()
         );
 
-        (new UserInMemoryRepository)->save($user);
+        (new UserInMemoryRepository)->add($user);
 
         return $user;
     }

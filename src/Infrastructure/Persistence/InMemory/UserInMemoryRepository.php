@@ -12,7 +12,7 @@ final class UserInMemoryRepository implements UserRepositoryInterface
 {
     private $repository = [];
 
-    public function save(User $user)
+    public function add(User $user)
     {
         $this->repository[(string) $user->id()] = $user;
     }
