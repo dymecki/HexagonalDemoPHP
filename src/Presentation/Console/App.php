@@ -1,12 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-namespace App\Adapter\Console;
+namespace App\Presentation\Console;
 
 require __DIR__.'/../../../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
 $app = new Application('HexagonalDemo', '1.0.0');
-$app->add(new UserCommand);
+$app->add(new UserCommand());
 $app->run();

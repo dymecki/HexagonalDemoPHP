@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Adapter\Console;
+namespace App\Presentation\Console;
 
 use App\Domain\Model\User\User;
 use App\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
