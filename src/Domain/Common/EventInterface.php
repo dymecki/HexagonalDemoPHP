@@ -6,5 +6,6 @@ namespace App\Domain\Common;
 
 interface EventInterface
 {
+    public function appearedAt(): \DateTime;
     public function name(): string;
 }
