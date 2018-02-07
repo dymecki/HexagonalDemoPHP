@@ -4,9 +4,9 @@ declare(strict_types = 1);
 
 namespace App\Infrastructure\Persistence\InMemory;
 
-use App\Domain\Common\EventInterface;
-use App\Domain\Common\EventStoreInterface;
-use App\Domain\Common\StoredEvent;
+use App\Domain\Event\EventInterface;
+use App\Domain\Event\EventStoreInterface;
+use App\Domain\Event\StoredEvent;
 use JMS\Serializer\SerializerBuilder;
 
 final class EventInMemoryRepository implements EventStoreInterface

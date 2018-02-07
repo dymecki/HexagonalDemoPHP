@@ -4,8 +4,6 @@ declare(strict_types = 1);
 
 namespace App\Domain\Event;
 
-use App\Domain\Common\EventInterface;
-
 final class DomainEventPublisher
 {
     private        $subscribers;

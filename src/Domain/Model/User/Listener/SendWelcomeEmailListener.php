@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace App\Domain\Model\User\Listener;
 
-use App\Domain\Common\EventInterface;
-use App\Domain\Common\EventListenerInterface;
+use App\Domain\Event\EventInterface;
+use App\Domain\Event\EventListenerInterface;
 
 final class SendWelcomeEmailListener implements EventListenerInterface
 {

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace App\Domain\Model\User\Event;
 
-use App\Domain\Common\Event;
+use App\Domain\Event\Event;
 
 final class UserUpdatedEvent extends Event
 {
