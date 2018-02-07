@@ -15,7 +15,8 @@
         "doctrine/orm": "*",
         "robmorgan/phinx": "^0.8.1",
         "php-amqplib/php-amqplib": "^2.6",
-        "moneyphp/money": "^3.0"
+        "moneyphp/money": "^3.0",
+        "jms/serializer": "^1.11"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
