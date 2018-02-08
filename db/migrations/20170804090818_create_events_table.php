@@ -27,13 +27,13 @@ class CreateEventsTable extends AbstractMigration
      */
     public function change()
     {
-        $this->execute('CREATE TABLE "Events" (
+        $this->execute('CREATE TABLE "EventStore" (
             "eventId" UUID PRIMARY KEY NOT NULL,
-            "userId" UUID NOT NULL,
-            name TEXT NOT NULL,
-            state JSONB NOT NULL,
-            created_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
-            updated_at TIMESTAMP
+            "AggregateType" TEXT NOT NULL,
+            "AggregateId" UUID NOT NULL,
+            version INT NOT NULL,
+            data JSONB NOT NULL,
+            created_at TIMESTAMP NOT NULL DEFAULT current_timestamp
         )');
     }
 }
