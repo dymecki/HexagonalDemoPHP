@@ -6,6 +6,7 @@ namespace App\Domain\Model\Book;
 
 use App\Domain\Common\AggregateRoot;
 use App\Domain\Common\Uuid;
+use App\Domain\Model\Book\Event\BookCreatedEvent;
 
 final class Book extends AggregateRoot
 {
@@ -42,6 +43,11 @@ final class Book extends AggregateRoot
     public function isbn(): BookIsbn
     {
         return $this->isbn;
+    }
+
+    public function applyBookCreated(BookCreatedEvent $event): void
+    {
+        $this->id = $event->bookId();
     }
 
     public function __toString(): string
