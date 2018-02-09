@@ -30,4 +30,14 @@ abstract class AggregateRoot implements AggregateRootInterface
     {
         $this->events = [];
     }
+
+    public function applyEvents()
+    {
+        $methodName = '';
+
+        foreach ($this->events as $event) {
+            $methodName = 'apply' . get_class($event);
+            $this->$methodName($event);
+        }
+    }
 }
