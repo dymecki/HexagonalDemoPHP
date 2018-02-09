@@ -8,7 +8,7 @@ use App\Domain\Common\AggregateRoot;
 use App\Domain\Common\Uuid;
 use App\Domain\Event\DomainEventPublisher;
 use App\Domain\Model\Book\Event\BookCreatedEvent;
-use App\Domain\Model\User\Event\UserRegisteredEvent;
+use App\Domain\Model\Book\Event\BookTitleWasUpdatedEvent;
 
 final class Book extends AggregateRoot
 {
@@ -57,7 +57,15 @@ final class Book extends AggregateRoot
 
     public function applyBookCreated(BookCreatedEvent $event): void
     {
-        $this->id = $event->bookId();
+        $this->id    = $event->bookId();
+        $this->title = $event->title();
+        $this->isbn  = $event->isbn();
+    }
+
+    public function applyBookTitleWasUpdated(BookTitleWasUpdatedEvent $event): void
+    {
+        $this->id    = $event->bookId();
+        $this->title = $event->title();
     }
 
     public function __toString(): string
