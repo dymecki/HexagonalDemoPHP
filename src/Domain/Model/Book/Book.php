@@ -6,7 +6,9 @@ namespace App\Domain\Model\Book;
 
 use App\Domain\Common\AggregateRoot;
 use App\Domain\Common\Uuid;
+use App\Domain\Event\DomainEventPublisher;
 use App\Domain\Model\Book\Event\BookCreatedEvent;
+use App\Domain\Model\User\Event\UserRegisteredEvent;
 
 final class Book extends AggregateRoot
 {
@@ -19,6 +21,14 @@ final class Book extends AggregateRoot
         $this->id    = $id;
         $this->title = $title;
         $this->isbn  = $isbn;
+
+        DomainEventPublisher::instance()->publish(
+            new BookCreatedEvent(
+                $this->id(),
+                $this->title(),
+                $this->isbn()
+            )
+        );
     }
 
     public static function register(string $bookTitle, string $bookIsbn): self

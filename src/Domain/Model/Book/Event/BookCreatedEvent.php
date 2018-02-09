@@ -9,9 +9,11 @@ use App\Domain\Event\Event;
 final class BookCreatedEvent extends Event
 {
     private $bookId;
+    private $title;
+    private $isbn;
     private $appearedAt;
 
-    public function __construct($bookId)
+    public function __construct($bookId, $title, $isbn)
     {
         $this->bookId     = $bookId;
         $this->appearedAt = new \DateTime();
@@ -20,6 +22,16 @@ final class BookCreatedEvent extends Event
     public function bookId()
     {
         return $this->bookId;
+    }
+
+    public function title()
+    {
+        return $this->title;
+    }
+
+    public function isbn()
+    {
+        return $this->isbn;
     }
 
     public function appearedAt(): \DateTime
