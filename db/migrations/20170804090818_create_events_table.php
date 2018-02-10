@@ -28,7 +28,7 @@ class CreateEventsTable extends AbstractMigration
     public function change()
     {
         $this->execute('CREATE TABLE "EventStore" (
-            "eventId" UUID PRIMARY KEY NOT NULL,
+            "eventId" BIGSERIAL PRIMARY KEY NOT NULL,
             "AggregateType" TEXT NOT NULL,
             "AggregateId" UUID NOT NULL,
             version INT NOT NULL,
