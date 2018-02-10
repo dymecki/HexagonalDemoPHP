@@ -12,9 +12,10 @@ final class BookTitleWasUpdatedEvent extends Event
     private $title;
     private $appearedAt;
 
-    public function __construct($bookId, $title)
+    public function __construct($bookId, string $title)
     {
         $this->bookId     = $bookId;
+        $this->title      = $title;
         $this->appearedAt = new \DateTime();
     }
 
@@ -23,7 +24,7 @@ final class BookTitleWasUpdatedEvent extends Event
         return $this->bookId;
     }
 
-    public function title()
+    public function title(): string
     {
         return $this->title;
     }
