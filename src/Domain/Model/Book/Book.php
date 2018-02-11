@@ -28,7 +28,7 @@ final class Book extends AggregateRoot
                 $this->id(),
                 (string) $this->title(),
                 (string) $this->author(),
-                $this->isbn()
+                (string) $this->isbn()
             )
         );
     }
