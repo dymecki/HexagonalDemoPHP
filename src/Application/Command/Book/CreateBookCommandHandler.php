@@ -9,6 +9,7 @@ use App\Domain\Event\DomainEventPublisher;
 use App\Domain\Model\Book\Book;
 use App\Domain\Model\Book\Event\BookCreatedEvent;
 use App\Infrastructure\Persistence\InMemory\BookInMemoryRepository;
+use App\Infrastructure\Persistence\EventStore\PdoEventStore;
 
 final class CreateBookCommandHandler implements CommandHandlerInterface
 {
@@ -22,13 +23,15 @@ final class CreateBookCommandHandler implements CommandHandlerInterface
 
         (new BookInMemoryRepository())->add($book);
 
-        DomainEventPublisher::instance()->publish(
-            new BookCreatedEvent(
-                $book->id(),
-                (string) $book->title(),
-                $book->author(),
-                $book->isbn()
-            )
+        $event = new BookCreatedEvent(
+            $book->id(),
+            (string) $book->title(),
+            $book->author(),
+            $book->isbn()
         );
+
+        DomainEventPublisher::instance()->publish($event);
+
+        (new PdoEventStore())->add($event);
     }
 }
