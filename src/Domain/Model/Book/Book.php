@@ -12,7 +12,6 @@ use App\Domain\Model\Book\Event\BookTitleWasUpdatedEvent;
 
 final class Book extends AggregateRoot
 {
-    private $id;
     private $title;
     private $author;
     private $isbn;
@@ -41,11 +40,6 @@ final class Book extends AggregateRoot
             $author,
             new BookIsbn($bookIsbn)
         );
-    }
-
-    public function id(): string
-    {
-        return $this->id;
     }
 
     public function title(): BookTitle
