@@ -30,7 +30,7 @@ final class PdoEventStore
         $data          = Serializer::serialize($event);
 
         $stmt = $this->db->prepare('
-            INSERT INTO "EventStore" ("AggregateType", "AggregateId", version, data) 
+            INSERT INTO "EventStore" ("eventType", "aggregateId", version, data) 
             VALUES (:aggregateType, :aggregateId, :version, :data)
         ');
 
