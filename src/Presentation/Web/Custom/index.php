@@ -6,7 +6,7 @@ use App\Domain\Model\User\User;
 use App\Infrastructure\Persistence\InMemory\UserInMemoryRepository;
 use App\Application\Command\SimpleCommandBus;
 use App\Application\Command\User\RegisterUserCommand;
-use App\Application\Command\Book\RegisterBookCommand;
+use App\Application\Command\Book\CreateBookCommand;
 
 //$user = User::register(
 //    'John',
@@ -21,7 +21,7 @@ $commandBus          = new SimpleCommandBus;
 //    $commandBus->execute($registerUserCommand)
 //);
 
-$registerBookCommand = new RegisterBookCommand('Europe', 'Norman Davies', '978-83-240-1424-8');
+$registerBookCommand = new CreateBookCommand('Europe', 'Norman Davies', '978-83-240-1424-8');
 
 $commandBus->execute($registerBookCommand);
 

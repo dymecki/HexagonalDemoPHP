@@ -6,7 +6,7 @@ namespace App\Application\Command\Book;
 
 use App\Application\Command\CommandInterface;
 
-final class RegisterBookCommand implements CommandInterface
+final class CreateBookCommand implements CommandInterface
 {
     private $title;
     private $author;

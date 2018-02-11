@@ -10,9 +10,9 @@ use App\Domain\Model\Book\Book;
 use App\Domain\Model\Book\Event\BookCreatedEvent;
 use App\Infrastructure\Persistence\InMemory\BookInMemoryRepository;
 
-final class RegisterBookCommandHandler implements CommandHandlerInterface
+final class CreateBookCommandHandler implements CommandHandlerInterface
 {
-    public function handle(RegisterBookCommand $command)
+    public function handle(CreateBookCommand $command)
     {
         $book = Book::register(
             $command->title(),
