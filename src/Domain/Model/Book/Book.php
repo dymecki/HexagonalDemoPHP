@@ -16,7 +16,7 @@ final class Book extends AggregateRoot
     private $author;
     private $isbn;
 
-    private function __construct(string $id, BookTitle $title, string $author, BookIsbn $isbn)
+    private function __construct(string $id, BookTitle $title, BookAuthor $author, BookIsbn $isbn)
     {
         $this->id     = $id;
         $this->title  = $title;
@@ -27,19 +27,19 @@ final class Book extends AggregateRoot
             new BookCreatedEvent(
                 $this->id(),
                 (string) $this->title(),
-                $this->author(),
+                (string) $this->author(),
                 $this->isbn()
             )
         );
     }
 
-    public static function register(string $bookTitle, string $author, string $bookIsbn): self
+    public static function register(string $title, string $author, string $isbn): self
     {
         return new self(
             Uuid::generate(),
-            new BookTitle($bookTitle),
-            $author,
-            new BookIsbn($bookIsbn)
+            new BookTitle($title),
+            new BookAuthor($author),
+            new BookIsbn($isbn)
         );
     }
 
@@ -48,7 +48,7 @@ final class Book extends AggregateRoot
         return $this->title;
     }
 
-    public function author(): string
+    public function author(): BookAuthor
     {
         return $this->author;
     }

@@ -12,6 +12,10 @@ final class BookAuthor extends ValueObject
 
     public function __construct(string $value)
     {
+        if ( ! trim($value)) {
+            throw new \Exception('Book author cannot be empty.');
+        }
+
         $this->value = $value;
     }
 
