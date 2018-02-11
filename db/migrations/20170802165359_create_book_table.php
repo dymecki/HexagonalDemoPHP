@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CreateCarTable extends AbstractMigration
+class CreateBookTable extends AbstractMigration
 {
     /**
      * Change Method.
