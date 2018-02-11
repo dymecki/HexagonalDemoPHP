@@ -27,12 +27,11 @@ class CreateCarTable extends AbstractMigration
      */
     public function change()
     {
-        $this->execute('CREATE TABLE "Cars" (
-            "carId" UUID PRIMARY KEY NOT NULL,
-            brand TEXT NOT NULL,
-            model TEXT NOT NULL,
-            --fuelAmount DECIMAL NOT NULL,
-            --fuelUnit TEXT NOT NULL,
+        $this->execute('CREATE TABLE "Books" (
+            "bookId" UUID PRIMARY KEY NOT NULL,
+            title TEXT NOT NULL,
+            author TEXT NOT NULL,
+            isbn TEXT NOT NULL,
             created_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
             updated_at TIMESTAMP
         )');
