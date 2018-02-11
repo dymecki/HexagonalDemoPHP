@@ -9,9 +9,10 @@ abstract class Event implements EventInterface
     protected $aggregateId;
     protected $appearedAt;
 
-    public function __construct()
+    public function __construct($aggregateId)
     {
-        $this->appearedAt = new \DateTime();
+        $this->aggregateId = $aggregateId;
+        $this->appearedAt  = new \DateTime();
     }
 
     public function aggregateId()

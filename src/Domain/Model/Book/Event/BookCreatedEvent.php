@@ -14,9 +14,8 @@ final class BookCreatedEvent extends Event
 
     public function __construct(string $aggregateId, string $title, string $author, string $isbn)
     {
-        parent::__construct();
+        parent::__construct($aggregateId);
 
-        $this->aggregateId = $aggregateId;
         $this->title       = $title;
         $this->author      = $author;
         $this->isbn        = $isbn;

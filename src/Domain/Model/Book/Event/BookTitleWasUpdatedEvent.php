@@ -8,29 +8,17 @@ use App\Domain\Event\Event;
 
 final class BookTitleWasUpdatedEvent extends Event
 {
-    private $bookId;
     private $title;
-    private $appearedAt;
 
-    public function __construct($bookId, string $title)
+    public function __construct(string $aggregateId, string $title)
     {
-        $this->bookId     = $bookId;
-        $this->title      = $title;
-        $this->appearedAt = new \DateTime();
-    }
+        parent::__construct($aggregateId);
 
-    public function bookId()
-    {
-        return $this->bookId;
+        $this->title       = $title;
     }
 
     public function title(): string
     {
         return $this->title;
-    }
-
-    public function appearedAt(): \DateTime
-    {
-        return $this->appearedAt;
     }
 }
