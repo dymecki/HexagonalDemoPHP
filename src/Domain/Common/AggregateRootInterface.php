@@ -8,9 +8,9 @@ use App\Domain\Event\EventInterface;
 
 interface AggregateRootInterface extends EntityInterface
 {
-    public function recordEvent(EventInterface $event);
+    public function recordEvent(EventInterface $event): void;
 
-    public function releaseEvents();
+    public function releaseEvents(): array;
 
-    public function clearEvents();
+    public function clearEvents(): void;
 }

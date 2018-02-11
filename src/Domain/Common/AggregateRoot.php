@@ -16,22 +16,22 @@ abstract class AggregateRoot implements AggregateRootInterface
         return $this->id;
     }
 
-    public function recordEvent(EventInterface $event)
+    public function recordEvent(EventInterface $event): void
     {
         $this->events[] = $event;
     }
 
-    public function releaseEvents()
+    public function releaseEvents(): array
     {
         return $this->events;
     }
 
-    public function clearEvents()
+    public function clearEvents(): void
     {
         $this->events = [];
     }
 
-    public function applyEvents()
+    public function applyEvents(): void
     {
         $methodName = '';
 
