@@ -6,11 +6,17 @@ namespace App\Domain\Event;
 
 abstract class Event implements EventInterface
 {
+    protected $aggregateId;
     protected $appearedAt;
 
     public function __construct()
     {
         $this->appearedAt = new \DateTime();
+    }
+
+    public function aggregateId()
+    {
+        return $this->aggregateId;
     }
 
     public function name(): string

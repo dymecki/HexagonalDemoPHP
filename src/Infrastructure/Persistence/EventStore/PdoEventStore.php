@@ -24,13 +24,10 @@ final class PdoEventStore
 
     public function add(Event $event)
     {
-        $aggregateType = rtrim(array_reverse(explode('\\', get_class($event)))[0], 'Event');
-        $aggregateId   = '7e622e4f-8b6e-4e26-bd34-1735d1c1d0e2';
+        $aggregateType = $event->name();
+        $aggregateId   = $event->aggregateId();
         $version       = 1;
         $data          = Serializer::serialize($event);
-
-//        var_dump($event);
-//        exit;
 
         $stmt = $this->db->prepare('
             INSERT INTO "EventStore" ("AggregateType", "AggregateId", version, data) 

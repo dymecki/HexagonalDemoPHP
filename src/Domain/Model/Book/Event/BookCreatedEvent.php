@@ -8,24 +8,18 @@ use App\Domain\Event\Event;
 
 final class BookCreatedEvent extends Event
 {
-    private $bookId;
     private $title;
     private $author;
     private $isbn;
 
-    public function __construct(string $bookId, string $title, string $author, string $isbn)
+    public function __construct(string $aggregateId, string $title, string $author, string $isbn)
     {
         parent::__construct();
 
-        $this->bookId     = $bookId;
-        $this->title      = $title;
-        $this->author     = $author;
-        $this->isbn       = $isbn;
-    }
-
-    public function bookId(): string
-    {
-        return $this->bookId;
+        $this->aggregateId = $aggregateId;
+        $this->title       = $title;
+        $this->author      = $author;
+        $this->isbn        = $isbn;
     }
 
     public function title(): string
