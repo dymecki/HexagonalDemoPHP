@@ -29,10 +29,10 @@ class CreateEventsTable extends AbstractMigration
     {
         $this->execute('CREATE TABLE "EventStore" (
             "eventId" BIGSERIAL PRIMARY KEY NOT NULL,
-            "AggregateType" TEXT NOT NULL,
-            "AggregateId" UUID NOT NULL,
-            version INT NOT NULL,
+            "aggregateId" UUID NOT NULL,
+            "eventType" TEXT NOT NULL,
             data JSONB NOT NULL,
+            version INT NOT NULL,
             created_at TIMESTAMP NOT NULL DEFAULT current_timestamp
         )');
     }
