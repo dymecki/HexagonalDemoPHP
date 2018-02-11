@@ -23,3 +23,7 @@ $handler->setFormatter($lineFormatter);
 
 // Add log file handler
 $logger->pushHandler($handler);
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
