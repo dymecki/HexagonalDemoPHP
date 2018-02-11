@@ -18,9 +18,10 @@ final class Book extends AggregateRoot
 
     private function __construct(string $id, BookTitle $title, string $author, BookIsbn $isbn)
     {
-        $this->id    = $id;
-        $this->title = $title;
-        $this->isbn  = $isbn;
+        $this->id     = $id;
+        $this->title  = $title;
+        $this->author = $author;
+        $this->isbn   = $isbn;
 
         DomainEventPublisher::instance()->publish(
             new BookCreatedEvent(
