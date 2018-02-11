@@ -26,8 +26,8 @@ final class CreateBookCommandHandler implements CommandHandlerInterface
         $event = new BookCreatedEvent(
             $book->id(),
             (string) $book->title(),
-            $book->author(),
-            $book->isbn()
+            (string) $book->author(),
+            (string) $book->isbn()
         );
 
         DomainEventPublisher::instance()->publish($event);
