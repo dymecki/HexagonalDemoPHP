@@ -74,8 +74,9 @@ final class Book extends AggregateRoot
     public function __toString(): string
     {
         return sprintf(
-            '%s %s',
+            '%s - %s, %s',
             $this->title(),
+            $this->author(),
             $this->isbn()
         );
     }
