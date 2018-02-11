@@ -10,12 +10,16 @@ final class BookCreatedEvent extends Event
 {
     private $bookId;
     private $title;
+    private $author;
     private $isbn;
     private $appearedAt;
 
-    public function __construct($bookId, $title, $isbn)
+    public function __construct($bookId, string $title, string $author, $isbn)
     {
         $this->bookId     = $bookId;
+        $this->title      = $title;
+        $this->author     = $author;
+        $this->isbn       = $isbn;
         $this->appearedAt = new \DateTime();
     }
 
@@ -24,9 +28,14 @@ final class BookCreatedEvent extends Event
         return $this->bookId;
     }
 
-    public function title()
+    public function title(): string
     {
         return $this->title;
+    }
+
+    public function author(): string
+    {
+        return $this->author;
     }
 
     public function isbn()

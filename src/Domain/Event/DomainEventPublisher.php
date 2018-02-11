@@ -14,7 +14,7 @@ final class DomainEventPublisher
         $this->subscribers = [];
     }
 
-    public static function instance()
+    public static function instance(): self
     {
         if (static::$instance == null) {
             static::$instance = new static();

@@ -14,9 +14,10 @@ final class Book extends AggregateRoot
 {
     private $id;
     private $title;
+    private $author;
     private $isbn;
 
-    private function __construct(string $id, BookTitle $title, BookIsbn $isbn)
+    private function __construct(string $id, BookTitle $title, string $author, BookIsbn $isbn)
     {
         $this->id    = $id;
         $this->title = $title;
@@ -25,17 +26,19 @@ final class Book extends AggregateRoot
         DomainEventPublisher::instance()->publish(
             new BookCreatedEvent(
                 $this->id(),
-                $this->title(),
+                (string) $this->title(),
+                $this->author(),
                 $this->isbn()
             )
         );
     }
 
-    public static function register(string $bookTitle, string $bookIsbn): self
+    public static function register(string $bookTitle, string $author, string $bookIsbn): self
     {
         return new self(
             Uuid::generate(),
             new BookTitle($bookTitle),
+            $author,
             new BookIsbn($bookIsbn)
         );
     }
@@ -50,6 +53,11 @@ final class Book extends AggregateRoot
         return $this->title;
     }
 
+    public function author(): string
+    {
+        return $this->author;
+    }
+
     public function isbn(): BookIsbn
     {
         return $this->isbn;
@@ -57,14 +65,14 @@ final class Book extends AggregateRoot
 
     public function applyBookCreated(BookCreatedEvent $event): void
     {
-        $this->id    = $event->bookId();
-        $this->title = $event->title();
-        $this->isbn  = $event->isbn();
+        $this->id     = $event->bookId();
+        $this->title  = $event->title();
+        $this->author = $event->author();
+        $this->isbn   = $event->isbn();
     }
 
     public function applyBookTitleWasUpdated(BookTitleWasUpdatedEvent $event): void
     {
-        $this->id    = $event->bookId();
         $this->title = $event->title();
     }
 

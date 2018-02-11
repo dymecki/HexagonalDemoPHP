@@ -6,5 +6,5 @@ namespace App\Application\Command;
 
 interface CommandHandlerInterface
 {
-    function handle(CommandInterface $command);
+//    function handle(CommandInterface $command);
 }
