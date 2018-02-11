@@ -2,16 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace App\Application\Command\User;
+namespace App\Application\Command\Book;
 
-use App\Application\Command\CommandInterface;
 use App\Application\Command\CommandHandlerInterface;
 use App\Domain\Model\Book\Book;
 use App\Infrastructure\Persistence\InMemory\BookInMemoryRepository;
 
 final class UpdateBookTitleCommandHandler implements CommandHandlerInterface
 {
-    public function handle(CommandInterface $command)
+    public function handle(UpdateBookTitleCommand $command)
     {
 //        $book = Book::findById($command->id());
 
