@@ -14,7 +14,7 @@ final class BookCreatedEvent extends Event
     private $isbn;
     private $appearedAt;
 
-    public function __construct($bookId, string $title, string $author, $isbn)
+    public function __construct($bookId, string $title, string $author, string $isbn)
     {
         $this->bookId     = $bookId;
         $this->title      = $title;
