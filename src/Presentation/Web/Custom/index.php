@@ -21,6 +21,13 @@ $commandBus          = new SimpleCommandBus;
 //    $commandBus->execute($registerUserCommand)
 //);
 
+
+
+//$bookTitle = new \App\Domain\Model\Book\BookTitle('');
+//var_dump($bookTitle);
+//exit;
+
+
 $registerBookCommand = new CreateBookCommand('Europe', 'Norman Davies', '978-83-240-1424-8');
 
 $commandBus->execute($registerBookCommand);

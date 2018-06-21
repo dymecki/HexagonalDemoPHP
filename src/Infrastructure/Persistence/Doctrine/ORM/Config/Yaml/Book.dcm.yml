@@ -1,11 +1,13 @@
-User:
+Book:
   type: entity
-  table: Users
+  table: Books
   id:
-    userId:
+    bookId:
       type: guid
       generator:
         strategy: UUID
   fields:
-    name:
+    title:
+      type: string
+    author:
       type: string
